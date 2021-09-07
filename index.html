@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <div class="calculator">
+        <form name="calcForm">
+            <input type="text" class="screen"
+            onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+            placeholder="0">
+        </form>
+        <table>
+            <tr>
+                <td colspan="2"><input type="button" style="width: 120px; background-color: #aaaaaa;" value="C" onclick="clean()"></td>
+                <td><input type="button" style="background-color: #aaaaaa;" value="<" onclick="del()"></td>
+                <td><input type="button" style="background-color: #ff9100;" value="/" onclick="buttonPress('/')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" onclick="buttonPress(7)"></td>
+                <td><input type="button" value="8" onclick="buttonPress(8)"></td>
+                <td><input type="button" value="9" onclick="buttonPress(9)"></td>
+                <td><input type="button" style="background-color: #ff9100;" value="X" onclick="buttonPress('*')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" onclick="buttonPress(4)"></td>
+                <td><input type="button" value="5" onclick="buttonPress(5)"></td>
+                <td><input type="button" value="6" onclick="buttonPress(6)"></td>
+                <td><input type="button" style="background-color: #ff9100;" value="-" onclick="buttonPress('-')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="1" onclick="buttonPress(1)"></td>
+                <td><input type="button" value="2" onclick="buttonPress(2)"></td>
+                <td><input type="button" value="3" onclick="buttonPress(3)"></td>
+                <td><input type="button" style="background-color: #ff9100;" value="+" onclick="buttonPress('+')"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="button" style="width: 120px;" value="0" onclick="buttonPress(0)"></td>
+                <td><input type="button" value="," onclick="buttonPress(',')"></td>
+                <td><input type="button" style="background-color: #ff9100;" value="=" onclick="equal('=')"></td>
+            </tr>
+        </table>
+        </div>
+        <script type="text/javascript" src="JS/script.js"></script>
+</body>
+</html>
